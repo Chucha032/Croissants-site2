@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #fff8f0;
+    color: #3a2a1a;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #c47a2c;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #a08060;
+    font-style: italic;
+}
+
+/* Вкладки */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.tab-btn {
+    padding: 10px 22px;
+    border: 2px solid #c47a2c;
+    background: #fff;
+    color: #c47a2c;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-btn:hover {
+    background: #ffeedd;
+}
+
+.tab-btn.active {
+    background: #c47a2c;
+    color: #fff;
+}
+
+/* Контент */
+.tab-content {
+    display: none;
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(180, 120, 50, 0.12);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fade 0.4s;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    color: #c47a2c;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffeedd;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #a05a10;
+    margin: 15px 0 8px;
+}
+
+.text-block p {
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.text-block ul, .text-block ol {
+    margin: 10px 0 15px 25px;
+}
+
+.text-block li {
+    margin-bottom: 6px;
+}
+
+/* Картинки */
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.images figure {
+    text-align: center;
+    max-width: 220px;
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #ffeedd;
+    transition: transform 0.3s;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #8a6a4a;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    color: #b0a090;
+    font-size: 0.9rem;
+    border-top: 1px solid #f0e0d0;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+    h1 { font-size: 1.6rem; }
+    .tab-btn { padding: 8px 14px; font-size: 0.9rem; }
+    .tab-content { padding: 15px; }
+    .images figure { max-width: 140px; }
+}
